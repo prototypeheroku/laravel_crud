@@ -20,5 +20,4 @@ Route::resource('posts', 'PostController');
 
 Route::resource('articles', 'ArticlesController');
 
-Route::get('users','UsersController@index');
 Route::resource('users', 'UsersController');

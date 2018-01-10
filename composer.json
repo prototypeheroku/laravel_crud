@@ -52,6 +52,6 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    }
+    },
     "laravelcollective/html": "~5.0"
 }

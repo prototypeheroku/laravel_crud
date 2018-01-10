@@ -19,3 +19,5 @@ Route::get('sample/search', 'SampleController@search');
 Route::resource('posts', 'PostController');
 
 Route::resource('articles', 'ArticlesController');
+
+Route::get('users','UsersController@index');

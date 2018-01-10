@@ -1,22 +1,21 @@
-<?php namespace App;
+<?php
   
+  use Illuminate\Database\Seeder;
   use Illuminate\Database\Eloquent\Model;
   
-  class Article extends Model
+  class DatabaseSeeder extends Seeder
   {
   
       /**
-       * The table associated with the model.
+       * Run the database seeds.
        *
-       * @var string
+       * @return void
        */
-      protected $table = 'articles';
+      public function run()
+      {
+          Model::unguard();
   
-      /**
-       * The attributes that are mass assignable.
-       *
-       * @var array
-       */
-      protected $fillable = ['title', 'body'];
+          $this->call('ArticlesTableSeeder');
+      }
   
   }

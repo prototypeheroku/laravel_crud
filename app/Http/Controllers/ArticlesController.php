@@ -21,9 +21,20 @@
      {
          $this->article = $article;
      }
+        /**
+     * 記事の一覧
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index()
+    {
+        $articles = $this->article->all();
+ 
+        return view('articles.index')->with(compact('articles'));
+    }
   
     /**
-     * �L���̈ꗗ
+     * 記事の一覧
      *
      * @return \Illuminate\View\View
      */
@@ -36,7 +47,7 @@
   
  
     /**
-     * �L���̏ڍ�
+     * 記事の詳細
      *
      * @param $id
      * @return \Illuminate\View\View
@@ -49,7 +60,7 @@
     }
 
     /**
-     * �L���̓��e
+     * 記事の投稿
      *
      * @return \Illuminate\View\View
      */
@@ -59,7 +70,7 @@
     }
  
     /**
-     * �L���̓��e
+     * 記事の投稿
      *
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
@@ -74,7 +85,7 @@
     }
   
     /**
-     * �L���̕ҏW
+     * 記事の編集
      *
      * @param $id
      * @return \Illuminate\View\View
@@ -87,7 +98,7 @@
     }
  
     /**
-     * �L���̕ҏW
+     * 記事の編集
      *
      * @param Request $request
      * @param         $id
@@ -104,7 +115,7 @@
     }
   
     /**
-     * �L���̍폜
+     * 記事の削除
      *
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
